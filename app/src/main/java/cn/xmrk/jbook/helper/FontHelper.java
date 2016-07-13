@@ -74,7 +74,7 @@ public class FontHelper {
         //遍历取出结尾为fontArea的文件，然后加载为Typeface
         File mkFile = new File(getFatherPath());
         for (File file : mkFile.listFiles()) {
-            if (file.getAbsolutePath().contains(fontArea)) {
+            if (file.getAbsolutePath().endsWith(fontArea)) {
                 typeFaces.add(Typeface.createFromFile(file));
             }
         }

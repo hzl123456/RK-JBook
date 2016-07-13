@@ -36,8 +36,8 @@ public class PhotoUtil {
     private int requestTake = REQUEST_TAKE;
     private int requestPick = REQUEST_PICK;
     private int requestCrop = REQUEST_CROP;
-    private int width = CommonUtil.getScreenDisplay().getWidth();
-    private int height = CommonUtil.getScreenDisplay().getWidth();
+    private int width = 500;
+    private int height = 500;
 
     public PhotoUtil(Activity activity) {
         this.mActivity = activity;
