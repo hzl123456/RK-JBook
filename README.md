@@ -11,10 +11,10 @@
     
     下面是几张效果截图
     
-    ![image](https://github.com/hzl123456/RK-Weather/blob/master/screen/Screenshot_2016-07-13-11-37-38.png)
-    ![image](https://github.com/hzl123456/RK-Weather/blob/master/screen/Screenshot_2016-07-13-12-14-34.png)
-    ![image](https://github.com/hzl123456/RK-Weather/blob/master/screen/Screenshot_2016-07-13-12-00-25.png)
-    ![image](https://github.com/hzl123456/RK-Weather/blob/master/screen/Screenshot_2016-07-13-11-57-47.png)
-    ![image](https://github.com/hzl123456/RK-Weather/blob/master/screen/Screenshot_2016-07-13-11-37-45.png)
+    ![image](https://github.com/hzl123456/RK-JBook/blob/master/screen/Screenshot_2016-07-13-11-37-38.png)
+    ![image](https://github.com/hzl123456/RK-JBook/blob/master/screen/Screenshot_2016-07-13-12-14-34.png)
+    ![image](https://github.com/hzl123456/RK-JBook/blob/master/screen/Screenshot_2016-07-13-12-00-25.png)
+    ![image](https://github.com/hzl123456/RK-JBook/blob/master/screen/Screenshot_2016-07-13-11-57-47.png)
+    ![image](https://github.com/hzl123456/RK-JBook/blob/master/screen/Screenshot_2016-07-13-11-37-45.png)
     
     
