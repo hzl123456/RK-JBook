@@ -1,7 +1,9 @@
 # RK-JBook
      这是一款发表图片文字心情的app（ui参照一款简图的app），支持在图片上写文字，同时图片可以调整亮度和模糊效果。
    支持多种字体的下载，支持文字字体大小调整和颜色调整，支持效果分享。
-    主要用到的第三方的library
+
+    主要用到的第三方的library：
+
     compile 'com.github.bumptech.glide:glide:3.7.0' //glide加载图片
     compile 'com.google.code.gson:gson:2.2.4' //gson解析jison
     compile 'cn.pedant.sweetalert:library:1.3'//dialog弹窗
