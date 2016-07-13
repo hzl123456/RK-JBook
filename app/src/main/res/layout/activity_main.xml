@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_containert"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <cn.xmrk.jbook.widget.DrawView
+        android:id="@+id/drawView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/drawView"
+        android:background="@color/color_text_black">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp">
+
+            <RelativeLayout
+                android:id="@+id/layout_color"
+                style="@style/LayoutWeight">
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    app:mrl_rippleAlpha="0.3"
+                    app:mrl_rippleColor="#000"
+                    app:mrl_rippleDelayClick="false"
+                    app:mrl_rippleDimension="5dp"
+                    app:mrl_rippleDuration="500"
+                    app:mrl_rippleOverlay="true"
+                    app:mrl_rippleRoundedCorners="10dp">
+
+                    <ImageButton
+                        android:id="@+id/btn_color"
+                        style="@style/BaseImageButton"
+                        android:src="@drawable/btn_color" />
+                </com.balysv.materialripple.MaterialRippleLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_texture"
+                style="@style/LayoutWeight">
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    app:mrl_rippleAlpha="0.3"
+                    app:mrl_rippleColor="#000"
+                    app:mrl_rippleDelayClick="false"
+                    app:mrl_rippleDimension="5dp"
+                    app:mrl_rippleDuration="500"
+                    app:mrl_rippleOverlay="true"
+                    app:mrl_rippleRoundedCorners="10dp">
+
+                    <ImageButton
+                        android:id="@+id/btn_texture"
+                        style="@style/BaseImageButton"
+                        android:src="@drawable/btn_texture" />
+                </com.balysv.materialripple.MaterialRippleLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_delete"
+                style="@style/LayoutWeight"
+                android:visibility="gone">
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    app:mrl_rippleAlpha="0.3"
+                    app:mrl_rippleColor="#000"
+
+                    app:mrl_rippleDelayClick="false"
+                    app:mrl_rippleDimension="5dp"
+                    app:mrl_rippleDuration="500"
+                    app:mrl_rippleOverlay="true"
+                    app:mrl_rippleRoundedCorners="10dp">
+
+                    <ImageButton
+                        android:id="@+id/btn_delete"
+                        style="@style/BaseImageButton"
+                        android:src="@drawable/button_delete" />
+                </com.balysv.materialripple.MaterialRippleLayout>
+            </RelativeLayout>
+
+            <RelativeLayout style="@style/LayoutWeight">
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    app:mrl_rippleAlpha="0.3"
+                    app:mrl_rippleColor="#000"
+                    app:mrl_rippleDelayClick="false"
+                    app:mrl_rippleDimension="5dp"
+                    app:mrl_rippleDuration="500"
+                    app:mrl_rippleOverlay="true"
+                    app:mrl_rippleRoundedCorners="10dp">
+
+                    <ImageButton
+                        android:id="@+id/btn_photo"
+                        style="@style/BaseImageButton"
+                        android:src="@drawable/btn_photo" />
+                </com.balysv.materialripple.MaterialRippleLayout>
+            </RelativeLayout>
+
+            <RelativeLayout style="@style/LayoutWeight">
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    app:mrl_rippleAlpha="0.3"
+                    app:mrl_rippleColor="#000"
+                    app:mrl_rippleDelayClick="false"
+                    app:mrl_rippleDimension="5dp"
+                    app:mrl_rippleDuration="500"
+                    app:mrl_rippleOverlay="true"
+                    app:mrl_rippleRoundedCorners="10dp">
+
+                    <ImageButton
+                        android:id="@+id/btn_font"
+                        style="@style/BaseImageButton"
+                        android:src="@drawable/btn_font" />
+                </com.balysv.materialripple.MaterialRippleLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <ImageButton
+            android:id="@+id/iv_gift"
+            android:visibility="gone"
+            android:background="@null"
+            android:layout_width="@dimen/seek_height"
+            android:layout_height="@dimen/seek_height"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="10dp"
+            android:src="@drawable/gift" />
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="20dp"
+            app:mrl_rippleAlpha="0.3"
+            app:mrl_rippleColor="#000"
+            app:mrl_rippleDelayClick="false"
+            app:mrl_rippleDimension="5dp"
+            app:mrl_rippleDuration="500"
+            app:mrl_rippleOverlay="true"
+            app:mrl_rippleRoundedCorners="10dp">
+
+            <ImageButton
+                android:id="@+id/ib_ok"
+                android:background="@null"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btn_confirm"
+                android:visibility="gone" />
+        </com.balysv.materialripple.MaterialRippleLayout>
+
+        <ImageButton
+            android:id="@+id/iv_setting"
+            android:background="@null"
+            android:layout_width="@dimen/seek_height"
+            android:layout_height="@dimen/seek_height"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:src="@drawable/setting" />
+
+    </RelativeLayout>
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="15dp"
+        android:padding="7dp"
+        app:mrl_rippleAlpha="0.1"
+        app:mrl_rippleColor="#000"
+        app:mrl_rippleDelayClick="false"
+        app:mrl_rippleDuration="500"
+        app:mrl_rippleOverlay="true"
+        app:mrl_rippleRoundedCorners="40dp">
+
+        <ImageButton
+            android:id="@+id/ib_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:src="@drawable/font_more" />
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+    <include
+        layout="@layout/layout_control"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/drawView" />
+
+    <include
+
+        layout="@layout/layout_drawtext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

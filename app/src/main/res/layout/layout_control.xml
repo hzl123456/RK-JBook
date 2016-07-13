@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_control"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#40000000"
+    android:orientation="horizontal"
+    android:visibility="gone">
+
+    <RelativeLayout style="@style/LayoutWeight">
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:mrl_rippleAlpha="0.3"
+            app:mrl_rippleColor="#000"
+            app:mrl_rippleDelayClick="false"
+            app:mrl_rippleDuration="500"
+            app:mrl_rippleOverlay="true"
+            app:mrl_rippleRoundedCorners="80dp">
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/tv_size_add"
+                android:layout_width="@dimen/control_height"
+                android:layout_height="@dimen/seek_height"
+                android:layout_centerInParent="true"
+                android:text="A+"
+                android:textColor="@color/bg_white"
+                android:textSize="20sp" />
+        </com.balysv.materialripple.MaterialRippleLayout>
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/LayoutWeight">
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:mrl_rippleAlpha="0.3"
+            app:mrl_rippleColor="#000"
+            app:mrl_rippleDelayClick="false"
+            app:mrl_rippleDuration="500"
+            app:mrl_rippleOverlay="true"
+            app:mrl_rippleRoundedCorners="80dp">
+
+            <TextView
+                android:id="@+id/tv_size_decrease"
+                android:layout_width="@dimen/control_height"
+                android:layout_height="@dimen/seek_height"
+                android:gravity="center"
+                android:text="A-"
+                android:textColor="@color/bg_white"
+                android:textSize="20sp" />
+        </com.balysv.materialripple.MaterialRippleLayout>
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/LayoutWeight">
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:mrl_rippleAlpha="0.3"
+            app:mrl_rippleColor="#000"
+            app:mrl_rippleDelayClick="false"
+            app:mrl_rippleDuration="500"
+            app:mrl_rippleOverlay="true"
+            app:mrl_rippleRoundedCorners="80dp">
+
+            <ImageButton
+                android:id="@+id/ib_color"
+                android:layout_width="@dimen/control_height"
+                android:layout_height="@dimen/seek_height"
+                android:layout_centerInParent="true"
+                android:background="@null"
+                android:src="@drawable/ic_material_color_light" />
+        </com.balysv.materialripple.MaterialRippleLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- 点击灰色变化-->
+    <color name="press_divider_grey">#77BDBDBD</color>
+
+    <!-- 点击灰色变化-->
+    <color name="press_control">#80000000</color>
+    <!--所需要使用的颜色-->
+    <color name="color_jb1">#00000000</color>
+    <color name="color_jb2">#80f79e10</color>
+    <color name="color_jb3">#80bd61de</color>
+    <color name="color_jb4">#80ff7d9c</color>
+    <color name="color_jb5">#80f7594a</color>
+    <color name="color_jb6">#80f7efde</color>
+    <color name="color_jb7">#804acab5</color>
+    <color name="color_jb8">#80ceb6b5</color>
+    <color name="color_jb9">#80293952</color>
+    <color name="color_jb10">#80c5cace</color>
+    <color name="color_jb11">#805abef7</color>
+
+</resources>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="7dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="7dp">
+
+        <ImageView
+            android:id="@+id/iv_font"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/font_size" />
+
+        <ImageButton
+            android:id="@+id/ib_download"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@null"
+            android:src="@drawable/font_cloud" />
+
+        <cn.xmrk.jbook.widget.CircleProgressbar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:visibility="gone"
+            app:finishedBorderColor="@color/bg_title_bar"
+            app:normalBorderColor="@color/press_divider_grey"
+            app:textSize="10sp"
+            app:cicleRadius="14dp"
+            app:cicleborder="3dp" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/diver"
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/color_text_black" />
+
+</LinearLayout>
