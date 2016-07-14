@@ -5,14 +5,12 @@
         <shape>
             <corners android:radius="@dimen/corner_size_normal"/>
             <solid android:color="@color/bg_white_pressed"/>
-            <stroke android:width="0.5dp" android:color="#C0C0C0"/>
         </shape>
     </item>
     <item android:state_pressed="false">
         <shape>
             <corners android:radius="@dimen/corner_size_normal"/>
             <solid android:color="@color/bg_white"/>
-            <stroke android:width="0.5dp" android:color="#C0C0C0"/>
         </shape>
     </item>
 </selector>

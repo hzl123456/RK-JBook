@@ -4,7 +4,8 @@
     <color name="colorPrimary">#3cb775</color>
     <color name="colorPrimaryDark">#3cb775</color>
     <color name="colorAccent">#3cb775</color>
-
+    <!-- 点击灰色变化-->
+    <color name="press_divider_grey">#77BDBDBD</color>
     <!-- 标题栏颜色 -->
     <color name="bg_title_bar">#3cb775</color>
     <!-- 透明标题栏颜色 -->

@@ -4,7 +4,6 @@
     android:layout_height="wrap_content"
     android:layout_alignParentBottom="true"
     android:layout_gravity="bottom"
-    android:background="#FFF"
     android:gravity="bottom"
     android:orientation="vertical"
     android:padding="15dp">
@@ -16,7 +15,7 @@
         android:background="@drawable/btn_corner_white_grey_grey"
         android:padding="10dp"
         android:text="@string/take_picture"
-        android:textColor="#000" />
+        android:textColor="@color/color_text_black" />
 
     <Button
         android:id="@+id/btn_select_from_gallery"
@@ -27,7 +26,7 @@
         android:background="@drawable/btn_corner_white_grey_grey"
         android:padding="10dp"
         android:text="@string/select_from_gallery"
-        android:textColor="#000" />
+        android:textColor="@color/color_text_black"  />
 
     <Button
         android:id="@+id/btn_cancel"

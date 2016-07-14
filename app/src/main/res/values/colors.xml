@@ -4,8 +4,7 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
-    <!-- 点击灰色变化-->
-    <color name="press_divider_grey">#77BDBDBD</color>
+
 
     <!-- 点击灰色变化-->
     <color name="press_control">#80000000</color>
