@@ -29,6 +29,7 @@ import android.widget.TextView;
 import net.margaritov.preference.colorpicker.ColorPickerDialog;
 
 import java.io.File;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -74,7 +75,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
 
     private boolean isKeyboardShow;
 
-
     /**
      * 当前选择的图片的地址
      **/
@@ -100,7 +100,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         showVersion();
-
     }
 
     private void canUse() {
@@ -109,6 +108,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
         showCustomTitlebar(false);
         initView();
         initAnimation();
+
     }
 
     private void showVersion() {
@@ -163,9 +163,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
             canUse();
         }
     }
-
-
-
 
     private void initAnimation() {
         showAnimation = AnimationUtils.loadAnimation(this, R.anim.trans_in);

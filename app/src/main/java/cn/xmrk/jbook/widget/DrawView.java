@@ -196,7 +196,6 @@ public class DrawView extends View {
                 float endY = event.getY();
                 if (mode == LEFT_TOUCH) {//左
                     drawLightPointY += (endY - startY);
-
                     if (drawLightPointY < upDownHeight) {//边界处理
                         drawLightPointY = upDownHeight;
                     } else if (drawLightPointY > mHeight - upDownHeight) {

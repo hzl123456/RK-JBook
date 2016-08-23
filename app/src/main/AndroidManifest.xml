@@ -21,6 +21,11 @@
         <activity
             android:name=".activity.FontActivity"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}" />
+
     </application>
 
 </manifest>
