@@ -10,13 +10,4 @@ public abstract class BaseRKConfig implements IRKConfig {
         return false;
     }
 
-    @Override
-    public int getNetTimeout() {
-        return 10000;
-    }
-
-    @Override
-    public int getNetRetryCount() {
-        return 3;
-    }
 }

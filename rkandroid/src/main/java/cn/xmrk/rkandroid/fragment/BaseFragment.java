@@ -16,7 +16,6 @@ import org.apache.log4j.Logger;
 import cn.xmrk.rkandroid.activity.BaseActivity;
 import cn.xmrk.rkandroid.application.RKApplication;
 import cn.xmrk.rkandroid.config.RKConfigHelper;
-import cn.xmrk.rkandroid.config.StatisticsConfig;
 
 /**
  * 2014年11月4日 下午3:59:50
@@ -41,7 +40,7 @@ public abstract class BaseFragment extends Fragment {
     public void onDestroy() {
         super.onDestroy();
         // 内存泄露检测
-        RKApplication.getInstance().getRefWatcher().watch(this);
+       RKConfigHelper.getInstance().getRefWatcher().watch(this);
     }
 
     @Override
@@ -67,7 +66,7 @@ public abstract class BaseFragment extends Fragment {
         if (contentView == null) {
             try {
                 contentView = inflater.inflate(getContentViewId(), null);
-                if (RKConfigHelper.getInstance().isDebug()) {
+                if (RKConfigHelper.getInstance().getRKConfig().isDebug()) {
                     log.debug("[onCreateView] isShow == " + isShow + ", this == " + this);
                 }
                 initOnCreateView(true);
@@ -122,7 +121,7 @@ public abstract class BaseFragment extends Fragment {
     }
 
     public void dispatchShow() {
-        if (RKConfigHelper.getInstance().isDebug()) {
+        if (RKConfigHelper.getInstance().getRKConfig().isDebug()) {
             log.debug("[dispatchShow] isViewCreate == " + (contentView != null) + ", this == " + this);
         }
         if (!isShow) {
@@ -143,18 +142,10 @@ public abstract class BaseFragment extends Fragment {
     public void onShow() {
         isShowDispatch = false;
         isShow = true;
-        StatisticsConfig _sc = RKApplication.getInstance().getStatisticsConfig();
-        if (_sc != null) {
-            _sc.onFragmentShow(getStatisTag());
-        }
     }
 
     public void onHide() {
         isShow = false;
-        StatisticsConfig _sc = RKApplication.getInstance().getStatisticsConfig();
-        if (_sc != null) {
-            _sc.onFragmentHide(getStatisTag());
-        }
     }
 
    public boolean onBackPressed(){

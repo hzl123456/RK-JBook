@@ -51,7 +51,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import cn.xmrk.rkandroid.R;
 import cn.xmrk.rkandroid.application.RKApplication;
-import cn.xmrk.rkandroid.config.RKConfigHelper;
 
 
 /**
@@ -184,7 +183,7 @@ public class CommonUtil {
     }
 
     public static Context getAppContext() {
-        return RKConfigHelper.getInstance().getContext();
+        return RKApplication.getInstance();
     }
 
     public static final void showToast(final int resId) {

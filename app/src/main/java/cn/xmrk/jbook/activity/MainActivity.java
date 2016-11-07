@@ -29,7 +29,6 @@ import android.widget.TextView;
 import net.margaritov.preference.colorpicker.ColorPickerDialog;
 
 import java.io.File;
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -43,7 +42,7 @@ import cn.xmrk.rkandroid.utils.CommonUtil;
 import cn.xmrk.rkandroid.utils.FileUtil;
 import cn.xmrk.rkandroid.utils.StringUtil;
 
-public class MainActivity extends BaseActivity implements View.OnClickListener, View.OnLayoutChangeListener {
+public class MainActivity extends BaseActivity implements  View.OnClickListener, View.OnLayoutChangeListener {
     private final int REQUEST_CODE_ASK_PERMISSIONS = 100;
     private final int CHOOSE_PIC = 55;
 

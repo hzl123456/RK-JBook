@@ -16,10 +16,11 @@ public class JBookApplication extends RKApplication {
 
     @Override
     public IRKConfig getRKConfig() {
+
         return new IRKConfig() {
             @Override
             public boolean isDebug() {
-                return false;
+                return true;
             }
 
             @Override
@@ -29,17 +30,7 @@ public class JBookApplication extends RKApplication {
 
             @Override
             public boolean isLeakWatch() {
-                return false;
-            }
-
-            @Override
-            public int getNetTimeout() {
-                return 0;
-            }
-
-            @Override
-            public int getNetRetryCount() {
-                return 0;
+                return true;
             }
         };
     }
@@ -51,6 +42,9 @@ public class JBookApplication extends RKApplication {
         FontHelper.loadTypeface();
     }
 
+    /**
+     * 配置okhttp的一些参数
+     **/
     public void initClient() {
         OkHttpClient okHttpClient = new OkHttpClient.Builder()
                 .connectTimeout(10000L, TimeUnit.MILLISECONDS)

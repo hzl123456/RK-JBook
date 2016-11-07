@@ -16,8 +16,7 @@ import android.widget.RelativeLayout;
 import java.lang.reflect.Field;
 
 import cn.xmrk.rkandroid.R;
-import cn.xmrk.rkandroid.application.RKApplication;
-import cn.xmrk.rkandroid.config.StatisticsConfig;
+import cn.xmrk.rkandroid.config.RKConfigHelper;
 import cn.xmrk.rkandroid.utils.DialogUtil;
 
 /**
@@ -49,8 +48,9 @@ public abstract class BaseActivity extends AppCompatActivity {
         contentLayout.addView(view);
         super.setContentView(contentView);
         setSupportActionBar(titlebar);
-      //  setStatusColor();
+        //  setStatusColor();
     }
+
     /**
      * 5.0以上设置状态栏的颜色，其实在6.0以上才有效果
      **/
@@ -63,33 +63,15 @@ public abstract class BaseActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        StatisticsConfig _sc = RKApplication.getInstance().getStatisticsConfig();
-        if (_sc != null) {
-            _sc.onActivityResume(getStatisTag());
-        }
+        //TODO 实际项目中可以接入友盟等的统计
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        StatisticsConfig _sc = RKApplication.getInstance().getStatisticsConfig();
-        if (_sc != null) {
-            _sc.onActivityPause(getStatisTag());
-        }
+        //TODO 实际项目中可以接入友盟等的统计
     }
 
-    /**
-     * 统计标签
-     *
-     * @return
-     */
-    protected String getStatisTag() {
-        try {
-            return titlebar.getTitle().toString();
-        } catch (Exception e) {
-            return getClass().getName();
-        }
-    }
 
     public Toolbar getTitlebar() {
         return titlebar;
@@ -105,7 +87,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         // 修复InputMethodManager导致的内存泄漏
         fixInputMethodManager(this);
         // 内存泄露检测
-        RKApplication.getInstance().getRefWatcher().watch(this);
+        RKConfigHelper.getInstance().getRefWatcher().watch(this);
     }
 
     /**

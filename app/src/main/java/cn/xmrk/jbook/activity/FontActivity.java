@@ -25,7 +25,7 @@ import okhttp3.Call;
 /**
  * Created by Au61 on 2016/7/12.
  */
-public class FontActivity extends BackableBaseActivity {
+public class FontActivity extends BackableBaseActivity  {
 
     private RecyclerView rvContent;
     private LinearLayoutManager layoutManager;
@@ -121,4 +121,5 @@ public class FontActivity extends BackableBaseActivity {
         //取消所有的请求
         OkHttpUtils.getInstance().cancelTag(this);
     }
+
 }

@@ -1,7 +1,6 @@
 package cn.xmrk.rkandroid.config;
 
 import android.app.Application;
-import android.content.Context;
 
 import com.squareup.leakcanary.LeakCanary;
 import com.squareup.leakcanary.RefWatcher;
@@ -21,23 +20,24 @@ import de.mindpipe.android.logging.log4j.LogConfigurator;
 /**
  * 配置文件
  */
-public class RKConfigHelper implements IRKConfig {
+public class RKConfigHelper {
 
     private static RKConfigHelper mInstance;
 
+
     public static RKConfigHelper getInstance() {
+        if (mInstance == null) {
+            synchronized (RKConfigHelper.class) {
+                mInstance = new RKConfigHelper();
+            }
+        }
         return mInstance;
     }
 
     /**
      * 进行初始化，从rkconfig.json里读取出来
      */
-    public static void init(Application context, IRKConfig config) {
-        if (mInstance != null) {
-            mInstance.context = null;
-            mInstance.mRKConfig = null;
-        }
-        mInstance = new RKConfigHelper();
+    public void init(Application context, IRKConfig config) {
         mInstance.mRKConfig = config;
         mInstance.context = context;
         mInstance.initExceptionHandler();
@@ -47,13 +47,11 @@ public class RKConfigHelper implements IRKConfig {
 
     private IRKConfig mRKConfig;
     private Application context;
-
     private final Logger log = Logger.getLogger(RKConfigHelper.class);
     private RefWatcher mRefWatcher;
-    private StatisticsConfig mStatisticsConfig;
 
     protected void initRefWatcher() {
-        if (RKConfigHelper.getInstance().isLeakWatch()) {
+        if (getRKConfig().isLeakWatch()) {
             mRefWatcher = LeakCanary.install(context);
         } else {
             mRefWatcher = RefWatcher.DISABLED;
@@ -71,7 +69,7 @@ public class RKConfigHelper implements IRKConfig {
         // 设置false为不打印到文件
         logConfigurator.setUseFileAppender(true);
         // 打印到Logcat上
-        logConfigurator.setUseLogCatAppender(RKConfigHelper.getInstance().isDebug());
+        logConfigurator.setUseLogCatAppender(getRKConfig().isDebug());
         // 只备份一个文件
         logConfigurator.setMaxBackupSize(1);
         logConfigurator.configure();
@@ -79,7 +77,7 @@ public class RKConfigHelper implements IRKConfig {
 
     private void initExceptionHandler() {
         final Thread.UncaughtExceptionHandler dueh = Thread.getDefaultUncaughtExceptionHandler();
-		/* 处理未捕捉异常 */
+        /* 处理未捕捉异常 */
         Thread.setDefaultUncaughtExceptionHandler(new Thread.UncaughtExceptionHandler() {
 
             @Override
@@ -114,66 +112,17 @@ public class RKConfigHelper implements IRKConfig {
         });
     }
 
+    /**
+     * 获取内存检测信息
+     **/
     public RefWatcher getRefWatcher() {
         return mRefWatcher;
     }
 
     /**
-     * 设置统计分析配置
-     * @return
-     */
-    public void setStatisticsConfig(StatisticsConfig config) {
-        this.mStatisticsConfig = config;
+     * 获取基本配置信息
+     **/
+    public IRKConfig getRKConfig() {
+        return mRKConfig;
     }
-
-    /**
-     * 获取当前设置好的统计分析配置
-     * @return
-     */
-    public StatisticsConfig getStatisticsConfig() {
-        return mStatisticsConfig;
-    }
-
-
-    public Context getContext() {
-        return context;
-    }
-
-    /**
-     * 测试模式
-     */
-    public boolean isDebug() {
-        return mRKConfig.isDebug();
-    }
-
-    /**
-     * 网站域名
-     */
-    public String getBaseUrl() {
-        return mRKConfig.getBaseUrl();
-    }
-
-    /**
-     * 打开LeakCanary检测内存泄漏
-     *
-     * @return
-     */
-    public boolean isLeakWatch() {
-        return mRKConfig.isLeakWatch();
-    }
-
-    /**
-     * 网络连接超时时间
-     */
-    public int getNetTimeout() {
-        return mRKConfig.getNetTimeout();
-    }
-
-    /**
-     * 网络连接重试次数
-     */
-    public int getNetRetryCount() {
-        return mRKConfig.getNetRetryCount();
-    }
-
 }
